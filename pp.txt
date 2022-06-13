@@ -1,0 +1,2 @@
+This app doesnt collect any/sensitive user and device data.
+This app target audience doesnt include children under 13.
