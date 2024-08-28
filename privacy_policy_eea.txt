@@ -1,0 +1,51 @@
+Privacy Policy
+Effective Date: Wednesday 28th, August, 2024
+
+1. Introduction
+
+This Privacy Policy outlines how Reward System App collects, uses, and protects your personal information when you use our Android app. We are committed to protecting your privacy and complying with applicable data protection laws.
+
+2. Information We Collect
+
+When you use our app, we may collect the following types of information:
+
+Personal Information: This may include your name, email address, device information (e.g., device ID, operating system, IP address), and usage data (e.g., app usage patterns, location data).
+Non-Personal Information: We may also collect non-personal information, such as your app version, device model, and interactions with ads.
+3. How We Use Your Information
+
+We may use your information for the following purposes:
+
+To provide and improve our app: We use your information to personalize your experience, diagnose and fix technical issues, and improve our app's features.
+To deliver personalized ads: We may use your information to deliver personalized ads that are relevant to your interests. This involves sharing your data with third-party advertising partners, including Google.
+For analytics and research: We may use your information for analytics purposes, such as measuring app usage, understanding user behavior, and conducting research.
+4. Sharing Your Information
+
+We may share your information with:
+
+Third-party advertising partners: We may share your information with third-party advertising partners to deliver personalized ads.
+Google: We may share your information with Google to enable ad personalization and measurement.
+Service providers: We may share your information with trusted service providers who assist us in operating our app and providing our services.   
+5. Your Rights
+
+You have the right to:
+
+Access your personal information: You can request access to the personal information we hold about you.
+Correct your personal information: You can request that we correct any inaccurate or incomplete personal information.
+Delete your personal information: You can request that we delete your personal information.
+Object to processing: You can object to the processing of your personal information for certain purposes.
+Withdraw consent: If we rely on your consent to process your personal information, you have the right to withdraw that consent at any time.   
+6. Data Security
+
+We implement reasonable security measures to protect your personal information from unauthorized access, disclosure, alteration, and destruction. However, no method of transmission over the internet or electronic storage is completely secure.   
+
+7. Children's Privacy
+
+Our app is not intended for use by children under the age of 18. We do not knowingly collect personal information from children. If you are a parent or guardian and believe that your child has provided us with personal information without your consent, please contact us at haydelawal@gmail.com.   
+
+8. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time. We will notify you of any material changes by posting a notice on our app or by other means.   
+
+9. Contact Us
+
+If you have any questions about this Privacy Policy or our practices, please contact us at haydelawal@gmail.com.
