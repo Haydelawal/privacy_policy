@@ -2,20 +2,25 @@ Privacy Policy
 Effective Date: Monday, July 15, 2025
 
 Introduction
-Thank you for using Bluetooth Chat. Your privacy is important to us. This Privacy Policy explains how Bluetooth Chat handles your information. The app is designed to work entirely offline via Bluetooth and does not collect, store, or share any personal or sensitive user data.
+Thank you for using Bluetooth Chat. Your privacy is important to us. This Privacy Policy explains how Bluetooth Chat handles your information. The app is designed to work entirely offline via Bluetooth and does not collect, store, or share any personal or sensitive user data. 
+
+Data Access
+Bluetooth chat does not collect, store, or share any personal or sensitive user data. It only uses bluetooth peer to peer connections to send messages from one device to another. The sent messages are not tracked, retained stored in the users device or an external server or 3rd party. Simply put, when you close the app and open it again, the previous chats are lost. 
 
 Why Location Permission Is Required
 Bluetooth Chat uses location permission solely because it is required by the Android operating system to scan for nearby Bluetooth devices.
-We do not access, collect, or track your location data in any form.
+We do not access, collect, or track your location data in any form or share with external servers or 3rd party.
 
-This permission is necessary for the core functionality of the app — enabling Bluetooth discovery and communication between nearby devices.
+This permission is necessary for the core functionality of the app, enabling Bluetooth discovery and communication between nearby devices.
 
 Information We Collect
 Bluetooth Chat does not collect any personal or non-personal information.
 
-No names, email addresses, phone numbers, or device identifiers are collected.
+No names, email addresses, phone numbers, credit card information are collected.
 
 No location data, usage data, or analytics are tracked or shared for any other reasons apart from solely scanning, discovering and connecting to other bluetooth devices.
+
+No bluetooth device identifiers, data, usage data, or analytics are used, tracked or shared for any other reasons apart from solely scanning, discovering and connecting to other bluetooth devices.
 
 No internet connectivity is required or used.
 
@@ -27,7 +32,7 @@ All messages are exchanged directly between devices via Bluetooth and are not st
 
 Data Sharing
 We do not share any data with third parties because we do not collect any data.
-Your messages are transmitted only between devices using a secure Bluetooth connection — not over the internet.
+Your messages are transmitted only between devices using a secure Bluetooth connection not over the internet.
 
 Security
 While we do not store or process any personal data, we follow standard security practices for Bluetooth communication.
