@@ -1,0 +1,45 @@
+Privacy Policy
+Effective Date: Monday, July 15, 2025
+
+Introduction
+Thank you for using Food Recipes App. Your privacy is important to us. This Privacy Policy explains how Food Recipes App handles your information. The app is designed with privacy in mind, it does not collect, store, or share any personal or sensitive user data.
+
+Information We Collect
+Food Recipes App does not collect any personal or non-personal information.
+We do not require you to sign up, log in, or provide any personally identifiable information (e.g., name, email address, phone number, or location).
+
+How the App Works
+The app helps you discover food recipes through the public and secure Spoonacular API (https://api.spoonacular.com).
+It provides instructions, ingredients, and overviews for each recipe.
+You can save or delete your favorite recipes, which are stored locally on your device only.
+The app supports offline access through automatic caching of previously viewed recipes.
+No internet connection is needed to access cached data, and no data is ever sent or shared with any third party.
+
+Data Storage and Access
+All recipe data you save is stored locally on your device.
+We do not sync or upload your saved data to any cloud, server, or third party.
+Uninstalling the app deletes all locally stored data, and no trace of it is retained or shared elsewhere.
+
+API Usage
+The app fetches public food recipe data from https://api.spoonacular.com.
+This API access is read-only and used strictly to display recipe content (titles, ingredients, steps, images, etc.).
+No user-specific identifiers or session data are sent to the API.
+
+No Data Sharing
+We do not share, sell, or transmit any user data because we do not collect any to begin with.
+Your use of the app remains completely private and secure.
+
+Children’s Privacy
+Food Recipes App is suitable for users of all ages.
+We do not knowingly collect or store any data from anyone, including children under the age of 18.
+However, we recommend parental supervision for younger users.
+
+Security
+While we do not collect or process any user data, the app follows standard Android development practices to ensure a secure and smooth experience.
+
+Changes to This Privacy Policy
+We may update this Privacy Policy from time to time. Any changes will be communicated within the app or via an app update.
+
+Contact Us
+If you have any questions or concerns about this Privacy Policy, please contact us:
+Email: haydelawal@gmail.com
