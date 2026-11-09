@@ -2,11 +2,11 @@
 
 ## 1. Introduction
 
-Guangel collects only what it needs to alert the people you trust, never sells your data, and shows no ads. This policy explains what the Guangel Android app ("Guangel", "the app") collects, why, where it is stored, who can see it, how long it is kept, and how you can delete it.
+Guangel collects only what it needs to alert the people you trust, never sells your data, and shows banner ads only on its information screens, never during an alert. This policy explains what the Guangel Android app ("Guangel", "the app") collects, why, where it is stored, who can see it, how long it is kept, and how you can delete it.
 
 Guangel is developed and operated by Hayde117 ("we", "us", "our"), an independent developer. Hayde117 is the data controller for the personal data described here.
 
-- **Effective date:** 8 November 2026
+- **Effective date:** 9 November 2026
 - **Contact:** haydelawal@gmail.com
 - **Applies to:** the Guangel app on Google Play, and the web page your trusted contacts open from a Guangel link (the "viewer").
 
@@ -29,8 +29,9 @@ Everything Guangel stores in the cloud lives in Google Firebase and Google Cloud
 | App PIN and decoy settings | To lock the app | Your phone only (PIN as a salted hash) | No one | Until you turn the lock off or uninstall |
 | Crash reports and basic usage events | To fix bugs and keep the app reliable | Firebase Crashlytics and Google Analytics for Firebase | Google, as our processor | Up to 90 days (crashes); up to 14 months (analytics) |
 | Notification token | To deliver Cate safety tips you opted into | Firebase Cloud Messaging | Google, as our processor | Until you turn tips off or uninstall |
+| Advertising ID and ad interactions | To show banner ads on the Cate and History screens, personalised only with your consent where the law requires it | Google AdMob | Google, which runs the ads | As set by Google's own policy |
 
-We do **not** sell personal data, share it for advertising, or use it to profile you.
+We do **not** sell personal data. The ad service (Google AdMob) gets only device and ad details, never your location, recordings, contacts or messages, and personalises ads only with your consent where the law requires it.
 
 ## 3. Information we collect
 
@@ -61,6 +62,7 @@ You choose to give us information about your trusted contacts. Please only add p
 - **Crash reports** (Firebase Crashlytics): device model, Android version, app version, and the technical details of the crash. Crash reports do not include your contacts, messages, location or recordings.
 - **Usage events** (Google Analytics for Firebase): basic events such as app opens and screen views, with an app-instance identifier. We never log contact details, message text, locations or links.
 - **Notification token** (Firebase Cloud Messaging): a device token used to deliver safety tips if you turn them on.
+- **Ads** (Google AdMob): your device's advertising ID, IP address, device and app details, and how you interact with the ads. Shown only on the Cate and History screens, never during an alert. Where the law requires it (for example in the EU and UK), Google asks for your consent first.
 - **Network status:** the app checks whether you are online or on a weak connection, on your phone only, so it can tell your recipients the link may be delayed. This is not sent to us.
 
 ### 3.4 Information about people who open your link
@@ -102,7 +104,7 @@ We use your information only to run Guangel's safety features, keep the service 
 
 We do **not**:
 
-- show ads or include any advertising SDK;
+- show ads on the SOS screens or while an alert is running, or let the ad service see your location, recordings, contacts or messages;
 - sell, rent or trade your personal data;
 - use your location, recordings or contacts for marketing, profiling or automated decisions;
 - send messages to your contacts except the alerts you start or the check-in alerts you set up.
@@ -172,6 +174,7 @@ We share your information only with the people you choose to alert and with the 
 | **Your mobile carrier** | The text messages you send, like any SMS | To deliver them |
 | **Google LLC / Google Ireland** (Firebase and Google Cloud) | All cloud data listed above, as our data processor | Hosting, sign-in, database, storage, crash reporting, analytics, notifications. See [Firebase privacy](https://firebase.google.com/support/privacy) |
 | **OpenStreetMap Foundation** | The recipient's IP address and the map area being viewed, when their browser loads map images | To draw the map on the viewer page. See the [OSMF privacy policy](https://osmfoundation.org/wiki/Privacy_Policy) |
+| **Google AdMob** | Your advertising ID, IP address, device and app details and ad interactions; never your location, recordings, contacts or messages | To show banner ads. See [how Google uses data from apps](https://policies.google.com/technologies/partner-sites) |
 | **Authorities** | Only what the law requires | If we receive a valid legal request, or to protect someone's life or safety |
 | **A buyer or successor** | Your data, under this same policy | If Guangel is sold or transferred; we will tell you first |
 
@@ -210,7 +213,7 @@ Most of this you can do yourself in the app:
 - **See and correct:** contacts, groups, messages, settings and History are all visible and editable in the app.
 - **Delete:** single alerts, all alerts, or your whole account (section 9).
 - **Withdraw consent:** turn off automatic check-in texts, Cate tips or the app lock in Settings, or revoke any permission in your phone's Settings.
-- **Limit analytics:** you can reset your advertising ID or turn off usage and diagnostics in your phone's Google settings.
+- **Limit analytics:** you can reset or delete your advertising ID, or turn off usage and diagnostics, in your phone's Google settings. Where the law requires it, Settings → Ad privacy choices in the app changes your ad consent.
 
 Depending on where you live, you may also have the right to:
 
