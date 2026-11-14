@@ -6,7 +6,7 @@ Guangel collects only what it needs to alert the people you trust, never sells y
 
 Guangel is developed and operated by Hayde117 ("we", "us", "our"), an independent developer. Hayde117 is the data controller for the personal data described here.
 
-- **Effective date:** 14 November 2026
+- **Effective date:** 15 November 2026
 - **Contact:** haydelawal@gmail.com
 - **Applies to:** the Guangel app on Google Play, and the web page your trusted contacts open from a Guangel link (the "viewer").
 
@@ -59,7 +59,7 @@ You choose to give us information about your trusted contacts. Please only add p
 
   Android always shows the microphone indicator and a notification while recording.
 - **Alert records.** For each alert: when it started and ended, which message was used, the sharing time you chose, and its status.
-- **Check-in timers.** The due time you set and whether you checked in. This is kept on your phone only. If a check-in alert goes out, it is stored like any other alert.
+- **Check-in timers.** The due time you set, the message you chose for it (if you picked one of your own instead of Guangel's usual wording), and whether you checked in. This is kept on your phone only. If a check-in alert goes out, it is stored like any other alert.
 
 ### 3.3 Information collected automatically
 
@@ -83,8 +83,8 @@ Guangel asks for each permission only when a feature needs it, and explains why 
 | --- | --- | --- |
 | Precise and approximate location | Sharing where you are during an active alert or check-in alert | Alerts still send your message, but without a working location |
 | Microphone | Recording audio during an active SOS alert | Alerts work without a recording |
-| Send SMS (optional) | **Only** to text your chosen contacts automatically when you miss a check-in. Guangel asks for your agreement in the app before you turn this on, and never uses it for anything else | When a check-in is missed, Guangel rings and opens your messaging app with the alert ready for you to send |
-| Notifications | Showing that location sharing is on, check-in timer warnings, and safety tips you opt into | You will not see timer warnings or tips |
+| Send SMS (optional) | **Only** to text your chosen contacts automatically when you miss a check-in. Guangel asks for your agreement in the app before you turn this on, and never uses it for anything else | When a check-in is missed, Guangel shows a notification and opens your messaging app with the alert ready for you to send |
+| Notifications | Showing that location sharing is on, check-in timer warnings, and safety tips you opt into. Guangel's notifications are silent (no sound or vibration), so they don't draw attention to you | You will not see timer warnings or tips |
 | Foreground service (location, microphone, data sync) | Keeping an alert running and uploading safely while the app is in the background | Required for alerts to work |
 | Exact alarms | Firing a check-in alert on time | The check-in alert may fire a few minutes late |
 | Internet and network state | Talking to our servers and detecting a weak connection | The app cannot sync |
@@ -121,10 +121,10 @@ An alert is a text message from your own phone number containing your message an
 
 **Sending without chosen recipients.** If you haven't chosen anyone to receive your SOS, the alert still starts: Guangel opens your phone's share sheet with your message and link, and you pick the app (for example WhatsApp, Telegram or SMS) and the person to send it to. You can also use **Share alert** during any SOS to send the link the same way. The message is then delivered by the app you picked, under that app's own privacy policy. Guangel does not see who you sent it to, what that app does with it, or any replies.
 
-**Check-in alerts.** When you set a check-in timer and do not cancel it in time, Guangel alerts the contacts you chose:
+**Check-in alerts.** When you set a check-in timer and do not cancel it in time, Guangel alerts the contacts you chose. The alert uses the message you picked when you started the timer: Guangel's usual check-in wording ("I set a Guangel check-in timer and didn't check in. Please check on me."), or one of your own messages, which is sent after "Missed check-in:" so your contacts know it was sent for you. Either way it includes your location link.
 
-- **If you agreed to automatic sending,** Guangel sends the SMS directly from your phone, in the background, using the Send SMS permission. The message says you set a check-in timer and did not respond, and includes your location link. Guangel shows you this before you agree, and you can turn it off at any time in Settings.
-- **If you did not agree,** Guangel rings and opens your messaging app with the alert ready, and you tap Send.
+- **If you agreed to automatic sending,** Guangel sends the SMS directly from your phone, in the background, using the Send SMS permission. Guangel shows you this before you agree, and you can turn it off at any time in Settings.
+- **If you did not agree,** Guangel shows a notification and opens your messaging app with the alert ready, and you tap Send.
 - Automatic sending needs your phone to be on and to have mobile signal. If your phone is off or out of coverage, the text cannot be sent.
 
 **The link.** Each alert has its own link containing a long random code (256 bits). Anyone who has the link can open it in a browser, without an account, until the alert is deleted (see Expiry). It shows:
@@ -166,7 +166,7 @@ Your cloud data is stored by Google in the **europe-southwest1 (Madrid, Spain)**
 - Our servers limit how many links each account can create (by default 10 per hour and 30 per day) and how often each IP address can load the viewer.
 - The viewer page tells search engines not to index it and does not send the link to other websites.
 
-**On your phone:** Guangel keeps a local copy of your contacts and checklist progress so they work offline. If you set an app PIN, only a salted bcrypt hash of it is stored, on your phone only. Recordings (the live pieces and the clearer copy) are kept in the app's private storage until uploaded, then deleted from the phone.
+**On your phone:** Guangel keeps a local copy of your contacts and checklist progress so they work offline, and your check-in timer with the message you chose for it until the timer ends. If you set an app PIN, only a salted bcrypt hash of it is stored, on your phone only. Recordings (the live pieces and the clearer copy) are kept in the app's private storage until uploaded, then deleted from the phone.
 
 No system is perfectly secure. If we learn of a breach that affects your personal data, we will notify you and the relevant authorities as the law requires.
 
