@@ -6,7 +6,7 @@ Guangel collects only what it needs to alert the people you trust, never sells y
 
 Guangel is developed and operated by Hayde117 ("we", "us", "our"), an independent developer. Hayde117 is the data controller for the personal data described here.
 
-- **Effective date:** 9 November 2026
+- **Effective date:** 14 November 2026
 - **Contact:** haydelawal@gmail.com
 - **Applies to:** the Guangel app on Google Play, and the web page your trusted contacts open from a Guangel link (the "viewer").
 
@@ -22,7 +22,7 @@ Everything Guangel stores in the cloud lives in Google Firebase and Google Cloud
 | Trusted contacts (name, phone, optional email) and groups | To know who to alert | Cloud Firestore | No one; the people themselves receive your alert texts | Until you delete them or your account |
 | Your own alert messages | To send the text you wrote | Cloud Firestore | Your chosen recipients, when you send an alert | Until you delete them or your account |
 | Location during an alert or check-in | To show your recipients where you are | Cloud Firestore | Anyone holding that alert's link, until the alert is deleted (read-only once sharing ends) | Your auto-delete setting (default 30 days, maximum 180) |
-| Audio recorded during an alert | Evidence you choose to capture | Cloud Storage for Firebase | Anyone holding that alert's link, until the alert is deleted (read-only once sharing ends) | Your auto-delete setting (default 30 days, maximum 180) |
+| Audio recorded during an alert | Evidence you choose to capture | Cloud Storage for Firebase | Anyone holding that alert's link: live, about a minute behind, while it records, then until the alert is deleted (read-only once sharing ends) | Your auto-delete setting (default 30 days, maximum 180) |
 | Alert and check-in records | Your History, and to make links work | Cloud Firestore | No one | Your auto-delete setting |
 | Names your recipients give when they tap "I've got this" | So you, and the others you alerted, know who is responding | Cloud Firestore | You, and anyone holding that alert's link, until the alert is deleted (read-only once sharing ends) | With the alert (your auto-delete setting) |
 | Checklist progress and app settings | So they follow you between phones | Cloud Firestore and your phone | No one | Until you delete your account |
@@ -53,7 +53,11 @@ You choose to give us information about your trusted contacts. Please only add p
 
 - **Precise location.** Collected **only** while an SOS alert or a check-in alert is active. It includes latitude, longitude, accuracy and time. Guangel does not track your location at any other time.
 - **Route.** While an alert is active, Guangel saves a point when you move about 25 metres or more, so your recipients can see where you started and where you were last seen.
-- **Audio recordings.** If you allow microphone access, Guangel records audio during an active SOS alert, for up to 10 minutes per alert. Recording stops when you stop the alert or the limit is reached. Android always shows the microphone indicator and a notification while recording.
+- **Audio recordings.** If you allow microphone access, Guangel records audio during an active SOS alert, for as long as the alert runs (at most 60 minutes, the longest sharing time). Recording stops when you stop the alert or its sharing time ends. Each recording is made twice from the same microphone:
+  - a **live recording** at a lower quality (32 kbps), sent in pieces about once a minute while the alert runs, so the people you alerted can listen in about a minute behind, even on a weak connection;
+  - a **clearer recording** (64 kbps), sent when the alert ends, after the rest of the live one. Once it has arrived it replaces the live recording on the link page.
+
+  Android always shows the microphone indicator and a notification while recording.
 - **Alert records.** For each alert: when it started and ended, which message was used, the sharing time you chose, and its status.
 - **Check-in timers.** The due time you set and whether you checked in. This is kept on your phone only. If a check-in alert goes out, it is stored like any other alert.
 
@@ -125,7 +129,7 @@ An alert is a text message from your own phone number containing your message an
 
 - your message;
 - your latest location, its accuracy and when it was updated, plus your route (start and last-seen points);
-- the audio recording, after the alert ends, if one was made;
+- the audio recording, if one is being made: while the alert runs, the live recording about a minute behind; after it ends, the full recording;
 - the names of anyone who has said "I've got this", and when;
 - when live sharing ends.
 
@@ -156,11 +160,11 @@ Your cloud data is stored by Google in the **europe-southwest1 (Madrid, Spain)**
 - All traffic between the app, the viewer and Google uses HTTPS (TLS). Data is encrypted at rest by Google.
 - Database rules let each signed-in user read and write only their own data. Link records and abuse counters can only be read by our servers.
 - We store only a one-way **hash** of each link's code, never the code itself. Someone who obtained a copy of our database could not use it to open your links.
-- Recordings are never public. The viewer gives a recipient a signed audio address that stops working after a few minutes.
+- Recordings are never public. The viewer plays them only to someone holding the alert's link: it passes the live recording through our server, and for the full recording gives a signed audio address that stops working after a few minutes.
 - Our servers limit how many links each account can create (by default 10 per hour and 30 per day) and how often each IP address can load the viewer.
 - The viewer page tells search engines not to index it and does not send the link to other websites.
 
-**On your phone:** Guangel keeps a local copy of your contacts and checklist progress so they work offline. If you set an app PIN, only a salted bcrypt hash of it is stored, on your phone only. Recordings are kept in the app's private storage until uploaded, then deleted from the phone.
+**On your phone:** Guangel keeps a local copy of your contacts and checklist progress so they work offline. If you set an app PIN, only a salted bcrypt hash of it is stored, on your phone only. Recordings (the live pieces and the clearer copy) are kept in the app's private storage until uploaded, then deleted from the phone.
 
 No system is perfectly secure. If we learn of a breach that affects your personal data, we will notify you and the relevant authorities as the law requires.
 
@@ -170,7 +174,7 @@ We share your information only with the people you choose to alert and with the 
 
 | Recipient | What they receive | Why |
 | --- | --- | --- |
-| **Your chosen recipients** | Your alert text, and through the link your location, route and recording until the alert is deleted (read-only once sharing ends) | Because you sent them an alert |
+| **Your chosen recipients** | Your alert text, and through the link your location, route and recording (live while it records) until the alert is deleted (read-only once sharing ends) | Because you sent them an alert |
 | **Your mobile carrier** | The text messages you send, like any SMS | To deliver them |
 | **Google LLC / Google Ireland** (Firebase and Google Cloud) | All cloud data listed above, as our data processor | Hosting, sign-in, database, storage, crash reporting, analytics, notifications. See [Firebase privacy](https://firebase.google.com/support/privacy) |
 | **OpenStreetMap Foundation** | The recipient's IP address and the map area being viewed, when their browser loads map images | To draw the map on the viewer page. See the [OSMF privacy policy](https://osmfoundation.org/wiki/Privacy_Policy) |
@@ -232,7 +236,7 @@ To make any request, email haydelawal@gmail.com. We will reply within 30 days, a
 
 **Safety disclaimer.** Guangel helps you reach people you trust. It does not replace calling emergency services, does not contact the police or ambulance for you, and cannot guarantee that a message is delivered, that a link loads, or that anyone responds. If you are in immediate danger, call your local emergency number.
 
-**Recording laws.** Some places require everyone's consent before a conversation is recorded. You are responsible for using the audio feature in line with the law where you are.
+**Recording laws.** Some places require everyone's consent before a conversation is recorded. You are responsible for using the audio feature in line with the law where you are. Remember that anyone holding your alert's link can listen to the recording while it is being made.
 
 **Changes to this policy.** If we make an important change, we will tell you in the app before it takes effect and update the date at the top. Earlier versions are available on request.
 
