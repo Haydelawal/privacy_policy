@@ -119,6 +119,8 @@ An alert is a text message from your own phone number containing your message an
 
 **SOS alerts.** When you start an SOS, Guangel opens your phone's messaging app with the message and recipients filled in. You tap Send. The text is sent by your mobile carrier like any other SMS, at your normal carrier rates. Guangel does not see the delivery or read replies.
 
+**Sending without chosen recipients.** If you haven't chosen anyone to receive your SOS, the alert still starts: Guangel opens your phone's share sheet with your message and link, and you pick the app (for example WhatsApp, Telegram or SMS) and the person to send it to. You can also use **Share alert** during any SOS to send the link the same way. The message is then delivered by the app you picked, under that app's own privacy policy. Guangel does not see who you sent it to, what that app does with it, or any replies.
+
 **Check-in alerts.** When you set a check-in timer and do not cancel it in time, Guangel alerts the contacts you chose:
 
 - **If you agreed to automatic sending,** Guangel sends the SMS directly from your phone, in the background, using the Send SMS permission. The message says you set a check-in timer and did not respond, and includes your location link. Guangel shows you this before you agree, and you can turn it off at any time in Settings.
@@ -176,6 +178,7 @@ We share your information only with the people you choose to alert and with the 
 | --- | --- | --- |
 | **Your chosen recipients** | Your alert text, and through the link your location, route and recording (live while it records) until the alert is deleted (read-only once sharing ends) | Because you sent them an alert |
 | **Your mobile carrier** | The text messages you send, like any SMS | To deliver them |
+| **Any app you share an alert through** | The alert text and link, when you pick that app in the share sheet | To deliver your alert to the person you chose there. That app's own privacy policy applies |
 | **Google LLC / Google Ireland** (Firebase and Google Cloud) | All cloud data listed above, as our data processor | Hosting, sign-in, database, storage, crash reporting, analytics, notifications. See [Firebase privacy](https://firebase.google.com/support/privacy) |
 | **OpenStreetMap Foundation** | The recipient's IP address and the map area being viewed, when their browser loads map images | To draw the map on the viewer page. See the [OSMF privacy policy](https://osmfoundation.org/wiki/Privacy_Policy) |
 | **Google AdMob** | Your advertising ID, IP address, device and app details and ad interactions; never your location, recordings, contacts or messages | To show banner ads. See [how Google uses data from apps](https://policies.google.com/technologies/partner-sites) |
