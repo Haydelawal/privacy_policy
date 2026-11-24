@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-Guangel collects only what it needs to alert the people you trust and never sells your data. The Android app shows banner ads only on its information screens, never during an alert; the iPhone app shows no ads. This policy explains what the Guangel app for Android and iPhone ("Guangel", "the app") collects, why, where it is stored, who can see it, how long it is kept, and how you can delete it.
+Guangel collects only what it needs to alert the people you trust and never sells your data. Guangel shows banner ads only on its information screens, never during an alert. This policy explains what the Guangel app for Android and iPhone ("Guangel", "the app") collects, why, where it is stored, who can see it, how long it is kept, and how you can delete it.
 
 Guangel is developed and operated by Hayde117 ("we", "us", "our"), an independent developer. Hayde117 is the data controller for the personal data described here.
 
@@ -29,9 +29,9 @@ Everything Guangel stores in the cloud lives in Google Firebase and Google Cloud
 | App PIN and decoy settings | To lock the app | Your phone only (PIN as a salted hash; on iPhone, in the Keychain) | No one | Until you turn the lock off or uninstall |
 | Crash reports and basic usage events | To fix bugs and keep the app reliable | Firebase Crashlytics and Google Analytics for Firebase | Google, as our processor | Up to 90 days (crashes); up to 14 months (analytics) |
 | Notification token | To deliver Cate safety tips you opted into, and notices about the app (for example that an update is available) | Firebase Cloud Messaging (and, on iPhone, Apple Push Notification service) | Google and Apple, as our processors | Until you uninstall |
-| Advertising ID and ad interactions (Android app only) | To show banner ads on the Cate and History screens, personalised only with your consent where the law requires it | Google AdMob | Google, which runs the ads | As set by Google's own policy |
+| Advertising ID and ad interactions | To show banner ads on the Cate and History screens, personalised only with your consent where the law requires it | Google AdMob | Google, which runs the ads | As set by Google's own policy |
 
-We do **not** sell personal data. The ad service in the Android app (Google AdMob) gets only device and ad details, never your location, recordings, contacts or messages, and personalises ads only with your consent where the law requires it.
+We do **not** sell personal data. The ad service (Google AdMob) gets only device and ad details, never your location, recordings, contacts or messages, and personalises ads only with your consent where the law requires it.
 
 ## 3. Information we collect
 
@@ -66,7 +66,7 @@ You choose to give us information about your trusted contacts. Please only add p
 - **Crash reports** (Firebase Crashlytics): device model, operating system version, app version, and the technical details of the crash. Crash reports do not include your contacts, messages, location or recordings.
 - **Usage events** (Google Analytics for Firebase): basic events such as app opens and screen views, with an app-instance identifier. The iPhone app doesn't use Apple's advertising identifier and doesn't track you. We never log contact details, message text, locations or links.
 - **Notification token** (Firebase Cloud Messaging; on iPhone, through Apple's push service): a device token used to deliver Cate's safety tips if you turn them on, and occasional notices about the app, such as an available update. It is not linked to your account. While the decoy screen is on, the app doesn't show these, so a notification can't give it away (on iPhone it stops listening for them).
-- **Ads** (Google AdMob, Android app only): your device's advertising ID, IP address, device and app details, and how you interact with the ads. Shown only on the Cate and History screens, never during an alert. Where the law requires it (for example in the EU and UK), Google asks for your consent first.
+- **Ads** (Google AdMob): your device and app details, IP address, how you interact with the ads, and on Android your device's advertising ID. The iPhone app never asks for Apple's advertising identifier, so it doesn't track you and shows no tracking prompt. Shown only on the Cate and History screens, never during an alert. Where the law requires it (for example in the EU and UK), Google asks for your consent first.
 - **Network status:** the app checks whether you are online (and, on Android, whether the connection is weak), on your phone only, so it can tell your recipients the link may be delayed. This is not sent to us.
 
 ### 3.4 Information about people who open your link
@@ -185,7 +185,7 @@ We share your information only with the people you choose to alert and with the 
 | **Google LLC / Google Ireland** (Firebase and Google Cloud) | All cloud data listed above, as our data processor | Hosting, sign-in, database, storage, crash reporting, analytics, notifications. See [Firebase privacy](https://firebase.google.com/support/privacy) |
 | **Apple** (iPhone app) | Your push token and the notifications sent to it | To deliver Cate tips and app notices through Apple Push Notification service |
 | **OpenStreetMap Foundation** | The recipient's IP address and the map area being viewed, when their browser loads map images | To draw the map on the viewer page. See the [OSMF privacy policy](https://osmfoundation.org/wiki/Privacy_Policy) |
-| **Google AdMob** (Android app only) | Your advertising ID, IP address, device and app details and ad interactions; never your location, recordings, contacts or messages | To show banner ads. See [how Google uses data from apps](https://policies.google.com/technologies/partner-sites) |
+| **Google AdMob** | Your advertising ID (Android), IP address, device and app details and ad interactions; never your location, recordings, contacts or messages | To show banner ads. See [how Google uses data from apps](https://policies.google.com/technologies/partner-sites) |
 | **Authorities** | Only what the law requires | If we receive a valid legal request, or to protect someone's life or safety |
 | **A buyer or successor** | Your data, under this same policy | If Guangel is sold or transferred; we will tell you first |
 
@@ -224,7 +224,7 @@ Most of this you can do yourself in the app:
 - **See and correct:** contacts, groups, messages, settings and History are all visible and editable in the app.
 - **Delete:** single alerts, all alerts, or your whole account (section 9).
 - **Withdraw consent:** turn off automatic check-in texts, Cate tips or the app lock in Settings, or revoke any permission in your phone's Settings.
-- **Limit analytics (Android):** you can reset or delete your advertising ID, or turn off usage and diagnostics, in your phone's Google settings. Where the law requires it, Settings → Ad privacy choices in the app changes your ad consent.
+- **Limit analytics and ads:** on Android you can reset or delete your advertising ID, or turn off usage and diagnostics, in your phone's Google settings. Where the law requires it, Settings → Ad privacy choices in the app (Android and iPhone) changes your ad consent.
 
 Depending on where you live, you may also have the right to:
 
