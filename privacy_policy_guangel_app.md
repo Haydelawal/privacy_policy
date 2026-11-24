@@ -27,7 +27,7 @@ Everything Guangel stores in the cloud lives in Google Firebase and Google Cloud
 | Names your recipients give when they tap "I've got this" | So you, and the others you alerted, know who is responding | Cloud Firestore | You, and anyone holding that alert's link, until the alert is deleted (read-only once sharing ends) | With the alert (your auto-delete setting) |
 | Checklist progress and app settings | So they follow you between phones | Cloud Firestore and your phone | No one | Until you delete your account |
 | App PIN and decoy settings | To lock the app | Your phone only (PIN as a salted hash; on iPhone, in the Keychain) | No one | Until you turn the lock off or uninstall |
-| Crash reports and basic usage events (Android app only, for now) | To fix bugs and keep the app reliable | Firebase Crashlytics and Google Analytics for Firebase | Google, as our processor | Up to 90 days (crashes); up to 14 months (analytics) |
+| Crash reports and basic usage events | To fix bugs and keep the app reliable | Firebase Crashlytics and Google Analytics for Firebase | Google, as our processor | Up to 90 days (crashes); up to 14 months (analytics) |
 | Notification token | To deliver Cate safety tips you opted into, and notices about the app (for example that an update is available) | Firebase Cloud Messaging (and, on iPhone, Apple Push Notification service) | Google and Apple, as our processors | Until you uninstall |
 | Advertising ID and ad interactions (Android app only) | To show banner ads on the Cate and History screens, personalised only with your consent where the law requires it | Google AdMob | Google, which runs the ads | As set by Google's own policy |
 
@@ -63,8 +63,8 @@ You choose to give us information about your trusted contacts. Please only add p
 
 ### 3.3 Information collected automatically
 
-- **Crash reports** (Firebase Crashlytics, Android app only): device model, Android version, app version, and the technical details of the crash. Crash reports do not include your contacts, messages, location or recordings.
-- **Usage events** (Google Analytics for Firebase, Android app only): basic events such as app opens and screen views, with an app-instance identifier. We never log contact details, message text, locations or links.
+- **Crash reports** (Firebase Crashlytics): device model, operating system version, app version, and the technical details of the crash. Crash reports do not include your contacts, messages, location or recordings.
+- **Usage events** (Google Analytics for Firebase): basic events such as app opens and screen views, with an app-instance identifier. The iPhone app doesn't use Apple's advertising identifier and doesn't track you. We never log contact details, message text, locations or links.
 - **Notification token** (Firebase Cloud Messaging; on iPhone, through Apple's push service): a device token used to deliver Cate's safety tips if you turn them on, and occasional notices about the app, such as an available update. It is not linked to your account. While the decoy screen is on, the app doesn't show these, so a notification can't give it away (on iPhone it stops listening for them).
 - **Ads** (Google AdMob, Android app only): your device's advertising ID, IP address, device and app details, and how you interact with the ads. Shown only on the Cate and History screens, never during an alert. Where the law requires it (for example in the EU and UK), Google asks for your consent first.
 - **Network status:** the app checks whether you are online (and, on Android, whether the connection is weak), on your phone only, so it can tell your recipients the link may be delayed. This is not sent to us.
@@ -158,7 +158,7 @@ Your cloud data is stored by Google in the **europe-southwest1 (Madrid, Spain)**
 | Cloud Firestore | Contacts, groups, messages, settings, checklist progress, alert records, locations |
 | Cloud Storage for Firebase | Audio recordings |
 | Cloud Functions and Cloud Run | The servers that register links and show the viewer page; they do not keep your data |
-| Firebase Crashlytics and Google Analytics (Android app only), Cloud Messaging, Remote Config | Crash reports, usage events, notification tokens, app configuration |
+| Firebase Crashlytics, Google Analytics, Cloud Messaging, Remote Config | Crash reports, usage events, notification tokens, app configuration |
 
 **How we protect it:**
 
