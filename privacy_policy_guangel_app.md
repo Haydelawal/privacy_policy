@@ -2,13 +2,13 @@
 
 ## 1. Introduction
 
-Guangel collects only what it needs to alert the people you trust, never sells your data, and shows banner ads only on its information screens, never during an alert. This policy explains what the Guangel Android app ("Guangel", "the app") collects, why, where it is stored, who can see it, how long it is kept, and how you can delete it.
+Guangel collects only what it needs to alert the people you trust and never sells your data. The Android app shows banner ads only on its information screens, never during an alert; the iPhone app shows no ads. This policy explains what the Guangel app for Android and iPhone ("Guangel", "the app") collects, why, where it is stored, who can see it, how long it is kept, and how you can delete it.
 
 Guangel is developed and operated by Hayde117 ("we", "us", "our"), an independent developer. Hayde117 is the data controller for the personal data described here.
 
-- **Effective date:** 15 November 2026
+- **Effective date:** 24 November 2026
 - **Contact:** haydelawal@gmail.com
-- **Applies to:** the Guangel app on Google Play, and the web page your trusted contacts open from a Guangel link (the "viewer").
+- **Applies to:** the Guangel app on Google Play and the App Store, and the web page your trusted contacts open from a Guangel link (the "viewer").
 
 By creating an account or using Guangel you agree to this policy. If you do not agree, please do not use the app.
 
@@ -26,12 +26,12 @@ Everything Guangel stores in the cloud lives in Google Firebase and Google Cloud
 | Alert and check-in records | Your History, and to make links work | Cloud Firestore | No one | Your auto-delete setting |
 | Names your recipients give when they tap "I've got this" | So you, and the others you alerted, know who is responding | Cloud Firestore | You, and anyone holding that alert's link, until the alert is deleted (read-only once sharing ends) | With the alert (your auto-delete setting) |
 | Checklist progress and app settings | So they follow you between phones | Cloud Firestore and your phone | No one | Until you delete your account |
-| App PIN and decoy settings | To lock the app | Your phone only (PIN as a salted hash) | No one | Until you turn the lock off or uninstall |
-| Crash reports and basic usage events | To fix bugs and keep the app reliable | Firebase Crashlytics and Google Analytics for Firebase | Google, as our processor | Up to 90 days (crashes); up to 14 months (analytics) |
-| Notification token | To deliver Cate safety tips you opted into | Firebase Cloud Messaging | Google, as our processor | Until you turn tips off or uninstall |
-| Advertising ID and ad interactions | To show banner ads on the Cate and History screens, personalised only with your consent where the law requires it | Google AdMob | Google, which runs the ads | As set by Google's own policy |
+| App PIN and decoy settings | To lock the app | Your phone only (PIN as a salted hash; on iPhone, in the Keychain) | No one | Until you turn the lock off or uninstall |
+| Crash reports and basic usage events (Android app only, for now) | To fix bugs and keep the app reliable | Firebase Crashlytics and Google Analytics for Firebase | Google, as our processor | Up to 90 days (crashes); up to 14 months (analytics) |
+| Notification token | To deliver Cate safety tips you opted into, and notices about the app (for example that an update is available) | Firebase Cloud Messaging (and, on iPhone, Apple Push Notification service) | Google and Apple, as our processors | Until you uninstall |
+| Advertising ID and ad interactions (Android app only) | To show banner ads on the Cate and History screens, personalised only with your consent where the law requires it | Google AdMob | Google, which runs the ads | As set by Google's own policy |
 
-We do **not** sell personal data. The ad service (Google AdMob) gets only device and ad details, never your location, recordings, contacts or messages, and personalises ads only with your consent where the law requires it.
+We do **not** sell personal data. The ad service in the Android app (Google AdMob) gets only device and ad details, never your location, recordings, contacts or messages, and personalises ads only with your consent where the law requires it.
 
 ## 3. Information we collect
 
@@ -57,17 +57,17 @@ You choose to give us information about your trusted contacts. Please only add p
   - a **live recording** at a lower quality (32 kbps), sent in pieces about once a minute while the alert runs, so the people you alerted can listen in about a minute behind, even on a weak connection;
   - a **clearer recording** (64 kbps), sent when the alert ends, after the rest of the live one. Once it has arrived it replaces the live recording on the link page.
 
-  Android always shows the microphone indicator and a notification while recording.
+  Android always shows the microphone indicator and a notification while recording; iPhone shows its microphone indicator.
 - **Alert records.** For each alert: when it started and ended, which message was used, the sharing time you chose, and its status.
 - **Check-in timers.** The due time you set, the message you chose for it (if you picked one of your own instead of Guangel's usual wording), and whether you checked in. This is kept on your phone only. If a check-in alert goes out, it is stored like any other alert.
 
 ### 3.3 Information collected automatically
 
-- **Crash reports** (Firebase Crashlytics): device model, Android version, app version, and the technical details of the crash. Crash reports do not include your contacts, messages, location or recordings.
-- **Usage events** (Google Analytics for Firebase): basic events such as app opens and screen views, with an app-instance identifier. We never log contact details, message text, locations or links.
-- **Notification token** (Firebase Cloud Messaging): a device token used to deliver safety tips if you turn them on.
-- **Ads** (Google AdMob): your device's advertising ID, IP address, device and app details, and how you interact with the ads. Shown only on the Cate and History screens, never during an alert. Where the law requires it (for example in the EU and UK), Google asks for your consent first.
-- **Network status:** the app checks whether you are online or on a weak connection, on your phone only, so it can tell your recipients the link may be delayed. This is not sent to us.
+- **Crash reports** (Firebase Crashlytics, Android app only): device model, Android version, app version, and the technical details of the crash. Crash reports do not include your contacts, messages, location or recordings.
+- **Usage events** (Google Analytics for Firebase, Android app only): basic events such as app opens and screen views, with an app-instance identifier. We never log contact details, message text, locations or links.
+- **Notification token** (Firebase Cloud Messaging; on iPhone, through Apple's push service): a device token used to deliver Cate's safety tips if you turn them on, and occasional notices about the app, such as an available update. It is not linked to your account. While the decoy screen is on, the app doesn't show these, so a notification can't give it away (on iPhone it stops listening for them).
+- **Ads** (Google AdMob, Android app only): your device's advertising ID, IP address, device and app details, and how you interact with the ads. Shown only on the Cate and History screens, never during an alert. Where the law requires it (for example in the EU and UK), Google asks for your consent first.
+- **Network status:** the app checks whether you are online (and, on Android, whether the connection is weak), on your phone only, so it can tell your recipients the link may be delayed. This is not sent to us.
 
 ### 3.4 Information about people who open your link
 
@@ -89,6 +89,8 @@ Guangel asks for each permission only when a feature needs it, and explains why 
 | Exact alarms | Firing a check-in alert on time | The check-in alert may fire a few minutes late |
 | Internet and network state | Talking to our servers and detecting a weak connection | The app cannot sync |
 
+**On iPhone,** Guangel asks for location as "While Using the App". It keeps working with the screen off only while an alert is running, and iOS shows its location indicator throughout. The iPhone app has **no Send SMS permission and never texts by itself**: a missed check-in shows a notification, and tapping it opens Messages with the alert ready for you to send. Its check-in reminders are marked "Time Sensitive", so they can reach you through a Focus. Foreground services, exact alarms and the Send SMS permission above are Android-only. The iPhone widget reads only your SOS button style, so it can wear the same disguise as the app.
+
 Guangel does **not** request access to your camera, your address book, your SMS inbox, or your location in the background outside an active alert. Guangel never reads your messages. SOS alerts are sent through your phone's own messaging app, where you tap Send yourself.
 
 ## 5. How we use your information
@@ -102,6 +104,7 @@ We use your information only to run Guangel's safety features, keep the service 
 | Send an SMS automatically when you miss a check-in | Check-in timer, chosen contacts, message, location link | Your consent, which you can withdraw in Settings |
 | Keep your History, checklists and settings | Alert records, checklist progress, settings | Performance of our agreement |
 | Send Cate safety tips | Notification token | Your consent (off by default) |
+| Tell you about the app, such as an available update | Notification token | Our legitimate interest in keeping your safety app working and up to date |
 | Prevent abuse and control costs | Alert counts per hour and day, viewer IP addresses | Our legitimate interest in keeping the service safe and available |
 | Fix crashes and improve reliability | Crash reports, usage events | Our legitimate interest in a working app |
 | Meet legal obligations | Any data required by law | Legal obligation |
@@ -117,14 +120,14 @@ We do **not**:
 
 An alert is a text message from your own phone number containing your message and a private web link that shows your location, and your recording if there is one.
 
-**SOS alerts.** When you start an SOS, Guangel opens your phone's messaging app with the message and recipients filled in. You tap Send. The text is sent by your mobile carrier like any other SMS, at your normal carrier rates. Guangel does not see the delivery or read replies.
+**SOS alerts.** When you start an SOS, Guangel opens your phone's messaging app (on iPhone, Apple's Messages sheet) with the message and recipients filled in. You tap Send. The text is sent by your mobile carrier like any other SMS, at your normal carrier rates. Guangel does not see the delivery or read replies.
 
 **Sending without chosen recipients.** If you haven't chosen anyone to receive your SOS, the alert still starts: Guangel opens your phone's share sheet with your message and link, and you pick the app (for example WhatsApp, Telegram or SMS) and the person to send it to. You can also use **Share alert** during any SOS to send the link the same way. The message is then delivered by the app you picked, under that app's own privacy policy. Guangel does not see who you sent it to, what that app does with it, or any replies.
 
 **Check-in alerts.** When you set a check-in timer and do not cancel it in time, Guangel alerts the contacts you chose. The alert uses the message you picked when you started the timer: Guangel's usual check-in wording ("I set a Guangel check-in timer and didn't check in. Please check on me."), or one of your own messages, which is sent after "Missed check-in:" so your contacts know it was sent for you. Either way it includes your location link.
 
-- **If you agreed to automatic sending,** Guangel sends the SMS directly from your phone, in the background, using the Send SMS permission. Guangel shows you this before you agree, and you can turn it off at any time in Settings.
-- **If you did not agree,** Guangel shows a notification and opens your messaging app with the alert ready, and you tap Send.
+- **If you agreed to automatic sending (Android only),** Guangel sends the SMS directly from your phone, in the background, using the Send SMS permission. Guangel shows you this before you agree, and you can turn it off at any time in Settings.
+- **If you did not agree, and always on iPhone,** Guangel shows a notification and opens your messaging app with the alert ready, and you tap Send.
 - Automatic sending needs your phone to be on and to have mobile signal. If your phone is off or out of coverage, the text cannot be sent.
 
 **The link.** Each alert has its own link containing a long random code (256 bits). Anyone who has the link can open it in a browser, without an account, until the alert is deleted (see Expiry). It shows:
@@ -155,7 +158,7 @@ Your cloud data is stored by Google in the **europe-southwest1 (Madrid, Spain)**
 | Cloud Firestore | Contacts, groups, messages, settings, checklist progress, alert records, locations |
 | Cloud Storage for Firebase | Audio recordings |
 | Cloud Functions and Cloud Run | The servers that register links and show the viewer page; they do not keep your data |
-| Firebase Crashlytics, Google Analytics, Cloud Messaging, Remote Config | Crash reports, usage events, notification tokens, app configuration |
+| Firebase Crashlytics and Google Analytics (Android app only), Cloud Messaging, Remote Config | Crash reports, usage events, notification tokens, app configuration |
 
 **How we protect it:**
 
@@ -166,7 +169,7 @@ Your cloud data is stored by Google in the **europe-southwest1 (Madrid, Spain)**
 - Our servers limit how many links each account can create (by default 10 per hour and 30 per day) and how often each IP address can load the viewer.
 - The viewer page tells search engines not to index it and does not send the link to other websites.
 
-**On your phone:** Guangel keeps a local copy of your contacts and checklist progress so they work offline, and your check-in timer with the message you chose for it until the timer ends. If you set an app PIN, only a salted bcrypt hash of it is stored, on your phone only. Recordings (the live pieces and the clearer copy) are kept in the app's private storage until uploaded, then deleted from the phone.
+**On your phone:** Guangel keeps a local copy of your contacts and checklist progress so they work offline, and your check-in timer with the message you chose for it until the timer ends. If you set an app PIN, only a salted hash of it is stored, on your phone only: bcrypt on Android, PBKDF2 in the Keychain on iPhone. Recordings (the live pieces and the clearer copy) are kept in the app's private storage until uploaded, then deleted from the phone.
 
 No system is perfectly secure. If we learn of a breach that affects your personal data, we will notify you and the relevant authorities as the law requires.
 
@@ -180,8 +183,9 @@ We share your information only with the people you choose to alert and with the 
 | **Your mobile carrier** | The text messages you send, like any SMS | To deliver them |
 | **Any app you share an alert through** | The alert text and link, when you pick that app in the share sheet | To deliver your alert to the person you chose there. That app's own privacy policy applies |
 | **Google LLC / Google Ireland** (Firebase and Google Cloud) | All cloud data listed above, as our data processor | Hosting, sign-in, database, storage, crash reporting, analytics, notifications. See [Firebase privacy](https://firebase.google.com/support/privacy) |
+| **Apple** (iPhone app) | Your push token and the notifications sent to it | To deliver Cate tips and app notices through Apple Push Notification service |
 | **OpenStreetMap Foundation** | The recipient's IP address and the map area being viewed, when their browser loads map images | To draw the map on the viewer page. See the [OSMF privacy policy](https://osmfoundation.org/wiki/Privacy_Policy) |
-| **Google AdMob** | Your advertising ID, IP address, device and app details and ad interactions; never your location, recordings, contacts or messages | To show banner ads. See [how Google uses data from apps](https://policies.google.com/technologies/partner-sites) |
+| **Google AdMob** (Android app only) | Your advertising ID, IP address, device and app details and ad interactions; never your location, recordings, contacts or messages | To show banner ads. See [how Google uses data from apps](https://policies.google.com/technologies/partner-sites) |
 | **Authorities** | Only what the law requires | If we receive a valid legal request, or to protect someone's life or safety |
 | **A buyer or successor** | Your data, under this same policy | If Guangel is sold or transferred; we will tell you first |
 
@@ -220,7 +224,7 @@ Most of this you can do yourself in the app:
 - **See and correct:** contacts, groups, messages, settings and History are all visible and editable in the app.
 - **Delete:** single alerts, all alerts, or your whole account (section 9).
 - **Withdraw consent:** turn off automatic check-in texts, Cate tips or the app lock in Settings, or revoke any permission in your phone's Settings.
-- **Limit analytics:** you can reset or delete your advertising ID, or turn off usage and diagnostics, in your phone's Google settings. Where the law requires it, Settings → Ad privacy choices in the app changes your ad consent.
+- **Limit analytics (Android):** you can reset or delete your advertising ID, or turn off usage and diagnostics, in your phone's Google settings. Where the law requires it, Settings → Ad privacy choices in the app changes your ad consent.
 
 Depending on where you live, you may also have the right to:
 
